@@ -34,6 +34,7 @@ case "$CHOICE" in
         bash reinstall.sh windows \
           --image-name "Windows 11 Enterprise LTSC 2024 Evaluation" \
           --iso "https://go.microsoft.com/fwlink/?linkid=2289029" \
+          --lang "en-us" \
           --password "$PASS" \
           --rdp-port "3778"
         ;;
