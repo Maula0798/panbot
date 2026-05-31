@@ -1,20 +1,24 @@
 #!/bin/bash
 
+exec < /dev/tty
+
 echo "================================="
-echo "  PILIH SISTEM OPERASI"
+echo "      PILIH SISTEM OPERASI"
 echo "================================="
 echo "1. Windows 11 Spectre (PANBOT)"
 echo "2. Windows 11 Enterprise LTSC 2024 Evaluation"
 echo
 
 read -p "Pilih (1/2): " CHOICE
-read -sp "Masukkan password Windows: " PASS
+echo
+
+read -p "Masukkan password Windows: " PASS
 echo
 
 wget -q -O reinstall.sh https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh
 chmod +x reinstall.sh
 
-case $CHOICE in
+case "$CHOICE" in
     1)
         echo "Menginstal Windows 11 Spectre (PANBOT)..."
         bash reinstall.sh dd \
@@ -38,7 +42,6 @@ case $CHOICE in
 esac
 
 echo
-echo "Instalasi selesai, reboot dalam 5 detik..."
+echo "Instalasi selesai. Reboot dalam 5 detik..."
 sleep 5
-
 reboot
