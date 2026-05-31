@@ -15,12 +15,12 @@ echo
 read -p "Masukkan password Windows: " PASS
 echo
 
-wget -q -O reinstall.sh https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh
-chmod +x reinstall.sh
 
 case "$CHOICE" in
     1)
         echo "Menginstal Windows 11 Spectre (PANBOT)..."
+        wget -O reinstall.sh https://raw.githubusercontent.com/kripul/reinstall/main/reinstall.sh
+        chmod +x reinstall.sh
         bash reinstall.sh dd \
           --img "https://pub-bc43ae568e3844ffa3309f40355ac836.r2.dev/windows11.img.gz" \
           --ssh-port 2222 \
@@ -29,6 +29,8 @@ case "$CHOICE" in
         ;;
     2)
         echo "Menginstal Windows 11 Enterprise LTSC 2024 Evaluation..."
+        wget -q -O reinstall.sh https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh
+        chmod +x reinstall.sh
         bash reinstall.sh windows \
           --image-name "Windows 11 Enterprise LTSC 2024 Evaluation" \
           --iso "https://go.microsoft.com/fwlink/?linkid=2289029" \
