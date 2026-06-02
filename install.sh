@@ -36,4 +36,8 @@ esac
 echo
 echo "Instalasi selesai. Reboot dalam 5 detik..."
 sleep 5
+echo "GRATIS MULU AH"
+sleep 5
+echo "NUHUN KEK"
+sleep 5
 reboot
